@@ -1,0 +1,81 @@
+.Movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+    cursor: pointer;
+}
+
+.Movie img {
+    max-width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    &__block-title {
+        max-width: 150px;
+    }
+
+    &__title {
+        font-size: 15px;
+    }
+
+    &__rating {
+        font-size: 15px;
+    }
+}
+
+.movie-info {
+    margin: 0;
+}
+
+.movie-over {
+    position: absolute;
+    background-color: #ffffff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 -3px 5px rgba(0,0,0, 0.1);
+    color: #22254d;
+    padding: 0.5rem;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    max-height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.8s ease-in-out;
+
+    &__btn-favorites {
+        margin-top: 15px;
+        width: 100%;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background-color: rgb(73, 218, 44);
+        color: #ffffff;
+        font-size: 18px;
+        letter-spacing: 0.5;
+        cursor: pointer;
+    }
+
+    &__btn-favorites:hover {
+        background-color: rgb(53, 177, 28);
+    }
+
+    &__btn-favorites:active {
+        background-color: rgb(47, 145, 28);
+    }
+}
+
+.Movie:hover .movie-over {
+    transform: translateY(0%);
+}
+
