@@ -6,6 +6,7 @@ export const fetchMovies = () => {
     fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
       .then(response => response.json())
       .then(data => dispatch(fetchMovie(data.results)))
+      .catch(err => console.log(err));
   }
 }
 

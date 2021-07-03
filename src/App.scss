@@ -3,6 +3,16 @@
   flex-direction: column;
 }
 
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 25px 0 25px;
+  background-color: #373b69;
+}
+
+
 .App-container {
   display: flex;
   flex-wrap: wrap;

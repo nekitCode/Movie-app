@@ -2,8 +2,9 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchMovies} from './asyncAction/fetchAction';
 import {searchMovies} from './reducer/searchReducer';
-import {Search} from './Components/Search/Search';
-import {Movie} from './Components/Movie/Movie';
+import {Search} from './Components/Header/Search/Search';
+import {MovieContainer} from './Components/MovieCard/MovieContainer';
+import {Logo} from "./Components/Header/Logo/Logo";
 
 import './App.scss';
 
@@ -17,25 +18,19 @@ export const App = () => {
     dispatch(fetchMovies());
   }, [])
 
-  const serachMovie = (text) => {
+  const searchMovie = (text) => {
     dispatch(searchMovies(text));
   }
 
   return (
     <div className='wrap'>
-      <Search serachMovie={serachMovie}/>
+      <header className='Header'>
+          <Logo />
+        <Search searchMovie={searchMovie}/>
+      </header>
 
       <div className='App-container'>
-
-        {movies.filter((titleMovie) => {
-          return titleMovie
-            .original_title
-            .toLowerCase()
-            .includes(search.toLowerCase())
-        }).map((movies) => {
-          return <Movie key={movies.id} data={movies}/>
-        })}
-
+        <MovieContainer movies={movies} search={search}/>
       </div>
     </div>
   );
