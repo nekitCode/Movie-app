@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import {BasicComponent} from './BasicComponent';
 import {Provider} from 'react-redux';
 import {store} from './store/store';
+import {Auth} from './Components/Auth/Auth';
 
 import './index.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BasicComponent/>
+    <Auth />
+    {/* <BasicComponent/> */}
   </Provider>,
   document.getElementById('root')
 );
