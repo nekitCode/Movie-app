@@ -1,7 +1,7 @@
 import React from 'react';
 import {Logo} from '../Header/Logo/Logo';
 import {useSelector} from 'react-redux';
-import {DetailsMovie} from './DetailsMovie';
+import {DetailsMovie} from './DeatailMovie/DetailsMovie';
 
 export const AboutMovie = (props) => {
   const matchId = Number(props.match.params.id);
@@ -9,15 +9,15 @@ export const AboutMovie = (props) => {
 
   return (
     <>
-    <div className='Header'>
-      <Logo/> 
-    </div>
-    {movies.filter((el) => {
-        return matchId === el.id;
-      }).map((data) => {
-        return <DetailsMovie data={data}/>
-      })
-    }
+      <div className='Header'>
+        <Logo/> 
+      </div>
+      {movies.filter((el) => {
+          return matchId === el.id;
+        }).map((data) => {
+          return <DetailsMovie key={data.id} data={data} />
+        })
+      }
     </>
   );
 }
