@@ -13,7 +13,7 @@ export const App = () => {
   const dispatch = useDispatch();
   const search = useSelector(state => state.search.text);
   const movies = useSelector(state => state.search.movies);
-
+  
   useEffect(() => {
     dispatch(fetchMovies());
   }, [])

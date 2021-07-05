@@ -7,7 +7,7 @@ export const BasicComponent = () => {
   return (
     <BrowserRouter>
         <Route path="/" exact component={App} />
-        <Route path="/search" exact component={AboutMovie} />
+        <Route path="/search/:id" exact component={AboutMovie} />
     </BrowserRouter>
   )
 }
