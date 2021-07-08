@@ -1,4 +1,4 @@
-import {SEARCH_MOVIES, FETCH_MOVIES, FETCH_MOVIE} from "../type/type";
+import {SEARCH_MOVIES, FETCH_MOVIES, FETCH_MOVIE, GET_USERNAME} from "../type/type";
 import {initialState} from "./initialState";
 
 export const searchReducer = (state = initialState, action) => {
@@ -18,6 +18,11 @@ export const searchReducer = (state = initialState, action) => {
         ...state,
         movie: [...state.movie, action.payload]
       };
+    case GET_USERNAME:
+      return {
+        ...state,
+        userName: action.payload
+      };
     default:
       return state
   }
@@ -26,3 +31,4 @@ export const searchReducer = (state = initialState, action) => {
 export const searchMovies = (payload) => ({type: SEARCH_MOVIES, payload});
 export const fetchMovie = (payload) => ({type: FETCH_MOVIES, payload});
 export const fetchMovies = (payload) => ({type: FETCH_MOVIE, payload});
+export const getUserName = (payload) => ({type: GET_USERNAME, payload})

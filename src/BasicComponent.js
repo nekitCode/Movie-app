@@ -9,9 +9,9 @@ export const BasicComponent = () => {
   return (
     <BrowserRouter>
         <Route path="/" exact component={App} />
-        <Route path="/search/:id" exact component={AboutMovie} />
-        <Route path='/signup' exact component={Signup}/>
-        <Route path='/signin' exact component={Signin}/>
+        <Route path="/search/:id"  component={AboutMovie} />
+        <Route path='/signup'  component={Signup}/>
+        <Route path='/signin'  component={Signin}/>
     </BrowserRouter>
   )
 }

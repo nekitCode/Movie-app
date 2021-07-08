@@ -63,6 +63,7 @@ export const SignupComponent = ({
             <span> Remember me</span>
           </div>
             <button
+              className='btn-submit__btn'
               onClick={() => gettingValidValueFromInput(email, password)}
               disabled={!formValid}
               type='submit'>

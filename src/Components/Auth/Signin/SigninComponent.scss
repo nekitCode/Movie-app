@@ -1,12 +1,5 @@
-.Form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.registration-field {
+.signin-field {
     width: 300px;
-
     &__input {
       margin-bottom: 25px;
       width: 300px;
@@ -17,7 +10,11 @@
     }
 }
 
-.btn-submit {
+.signin-btn-submit {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+
+    &__btn {
+        cursor: pointer;
+    }
 }

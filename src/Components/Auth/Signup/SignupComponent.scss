@@ -20,4 +20,8 @@
 .btn-submit {
     display: flex;
     justify-content: space-between;
+
+    &__btn {
+        cursor: pointer;
+    }
 }

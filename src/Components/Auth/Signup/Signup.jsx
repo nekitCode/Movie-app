@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 import {Logo} from '../../Header/Logo/Logo';
 import {SignupComponent} from './SignupComponent';
+import {getUserName} from '../../../reducer/searchReducer';
 
 export const Signup = () => {
 
@@ -15,6 +17,9 @@ export const Signup = () => {
   const [formValid, setFromValid] = useState(false);
   const [checked, setChecked] = useState(false);
   const [localStorageValue, setLocalStorageValue] = useState([]);
+
+  const dispatch = useDispatch();
+
   const history = useHistory();
 
   useEffect(() => {
@@ -36,7 +41,8 @@ export const Signup = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    history.push('/', userName);
+    history.push('/');
+    dispatch(getUserName(userName));
   }
 
   const emailHandler = (event) => {
@@ -77,7 +83,7 @@ export const Signup = () => {
   }
 
   const gettingChecked = (checked) => {
-      setChecked(checked.target.checked);
+    setChecked(checked.target.checked);
   }
 
   const gettingUserName = (name) => {

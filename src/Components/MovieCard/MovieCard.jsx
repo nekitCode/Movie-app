@@ -18,12 +18,16 @@ export const MovieCard = ({data}) => {
 
       <div className='movie-over'>
         <h2>Overview:</h2>
-        <p>
+        <div>
           {data.overview}
           <Link to={'search/' + data.id}>
             <button className='movie-over__btn-favorites'>more details</button>
           </Link>
-        </p>
+
+          <div className="favorite">
+            <button>Add favorite &#11088;</button>
+          </div>
+        </div>
       </div>
     </div>
   );
