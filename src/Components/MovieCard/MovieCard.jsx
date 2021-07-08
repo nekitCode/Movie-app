@@ -20,7 +20,7 @@ export const MovieCard = ({data}) => {
         <h2>Overview:</h2>
         <p>
           {data.overview}
-          <Link to={"search/" + data.id}>
+          <Link to={'search/' + data.id}>
             <button className='movie-over__btn-favorites'>more details</button>
           </Link>
         </p>

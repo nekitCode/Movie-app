@@ -1,0 +1,23 @@
+.Form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-field {
+    width: 300px;
+
+    &__input {
+      margin-bottom: 25px;
+      width: 300px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: space-between;
+}
