@@ -13,8 +13,8 @@ export const Signin = () => {
   const history = useHistory();
 
   useEffect(() => {
-    let res = localStorage.getItem('registration');
-    setStateUser(JSON.parse(res) || []);
+    let registration = localStorage.getItem('registration');
+    setStateUser(JSON.parse(registration) || []);
   }, []);
 
   const onSubmit = (event) => {

@@ -20,6 +20,7 @@ export const App = () => {
   const movies = useSelector(state => state.search.movies);
   const userName = useSelector(state => state.search.userName);
 
+
   const [test, setTest] = useState(false);
  
   useEffect(() => {
@@ -32,7 +33,8 @@ export const App = () => {
 
   const signout = (event) => {
     event.preventDefault();
-    // dispatch(getUserName(''));
+    dispatch(getUserName(''));
+    localStorage.clear('movie-favorite');
     setTest(true);
   }
 

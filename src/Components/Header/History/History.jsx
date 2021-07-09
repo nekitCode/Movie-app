@@ -6,8 +6,7 @@ export const History = () => {
   return (
     <div>
       <button className='History'>
-        <span className='History__span'>History
-        </span>
+        <span className='History__span'>History</span>
       </button>
     </div>
   );
