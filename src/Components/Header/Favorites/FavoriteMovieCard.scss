@@ -1,0 +1,36 @@
+.Favorite-movie-card {
+    display: flex;
+    padding: 25px 25px 0 25px;
+}
+
+.movie-poster {
+    border: 1px solid;
+    border-radius: 7px;
+    padding: 15px;
+    height: 100%;
+}
+
+.description-movie {
+    margin-left: 25px;
+
+    &__title {
+        margin-top: 25px;
+    }
+}
+
+.list-group {
+    max-width: 390px;
+    margin-left: 15px;
+    padding: 0;
+    border: 1px solid;
+    border-radius: 7px;
+    &__item {
+        padding: 20px 10px 20px 10px;
+        border-bottom: 1px solid;
+    }
+
+    &__item-movie-description {
+        padding: 20px 10px 20px 10px;
+    }
+}
+
